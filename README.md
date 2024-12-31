@@ -2,16 +2,14 @@
 
 Identifies and downloads low-resolution photos from Amazon Photos that lack device metadata - typically memes and social media images.
 
-WIP: Remove the crap!
-
 ## Features
 
 - Detects images under 1000px without device metadata
 - Downloads identified images locally for review
+- Optional trash function to move files to Amazon Photos trash
 - Generates timestamped log file of found images
 - Skips Google Pixel photos automatically
 - Respects API rate limits
-- No automatic deletion - review before removing
 
 ## Requirements
 
@@ -39,8 +37,15 @@ cookies = {
 ## Usage
 
 ```bash
+# Download only
 python small_image_finder.py
+
+# Download and move to trash
+python small_image_finder.py --trash
 ```
+
+Arguments:
+- `--trash`: Optional flag to move downloaded photos to trash in Amazon Photos
 
 Files are downloaded to `small_photos_no_device/` directory.
 
@@ -55,6 +60,7 @@ Terminal:
 ```
 Downloading: photo.jpg
 Size: 800x600
+Moving to trash: photo.jpg  # Only if --trash flag used
 ```
 
 Log file:
@@ -65,7 +71,7 @@ meme.png, 500x500, ID: DeF456UvW
 
 ## Warning
 
-Always review downloaded images before deletion from Amazon Photos.
+Always review downloaded images before permanent deletion from Amazon Photos trash.
 
 ## License
 
