@@ -19,18 +19,68 @@ pip install amazon-photos pillow
 
 ## Configuration
 
-1. Get required cookies from Amazon Photos UK:
-   - session-id
-   - ubid-acbuk  
-   - at-acbuk
+Get required cookies from Amazon Photos. The format varies by region:
 
-2. Add cookies to script:
-
+### United States
 ```python
 cookies = {
-    'session-id': '',    # Your session ID
-    'ubid-acbuk': '',    # Your UBID 
-    'at-acbuk': ''      # Your AT token
+    'session-id': '',    
+    'ubid_main': '',     # Note: _main suffix
+    'at_main': ''        # Note: _main suffix
+}
+```
+
+### United Kingdom
+```python
+cookies = {
+    'session-id': '',
+    'ubid-acbuk': '',    # Note: -acbuk suffix
+    'at-acbuk': ''       # Note: -acbuk suffix
+}
+```
+
+### Canada
+```python
+cookies = {
+    'session-id': '',
+    'ubid-acbca': '',    # Note: -acbca suffix
+    'at-acbca': ''       # Note: -acbca suffix
+}
+```
+
+### Germany
+```python
+cookies = {
+    'session-id': '',
+    'ubid-acbde': '',    # Note: -acbde suffix
+    'at-acbde': ''       # Note: -acbde suffix
+}
+```
+
+### France
+```python
+cookies = {
+    'session-id': '',
+    'ubid-acbfr': '',    # Note: -acbfr suffix
+    'at-acbfr': ''       # Note: -acbfr suffix
+}
+```
+
+### Italy
+```python
+cookies = {
+    'session-id': '',
+    'ubid-acbit': '',    # Note: -acbit suffix
+    'at-acbit': ''       # Note: -acbit suffix
+}
+```
+
+### Spain
+```python
+cookies = {
+    'session-id': '',
+    'ubid-acbes': '',    # Note: -acbes suffix
+    'at-acbes': ''       # Note: -acbes suffix
 }
 ```
 
